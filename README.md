@@ -89,3 +89,23 @@ Impersonation is a social engineering technique where an attacker pretends to be
 - BEC and impersonation often appear in phishing-related alerts
 - Quick escalation is critical since attackers often target executives and finance
 
+# Domain 2.2 – Watering Hole Attacks
+
+### Definition
+A watering hole attack compromises a website that a specific group of users visits frequently, using it to deliver malware or steal credentials.
+
+### Process
+1. Attacker researches target organization
+2. Identifies websites employees visit regularly
+3. Compromises those websites (malicious code, redirects, fake forms)
+4. Target employees visit site and are infected or tricked
+
+### Example
+- Government employees targeted via industry conference website
+- Visitors unknowingly downloaded malware
+
+**SOC Relevance:**
+- Analysts monitor proxy, DNS, and web logs for unusual domains
+- Endpoint security may detect drive-by downloads linked to watering holes
+- Threat intel feeds can identify known compromised sites
+- Correlation of multiple user infections from same domain is a key detection method
