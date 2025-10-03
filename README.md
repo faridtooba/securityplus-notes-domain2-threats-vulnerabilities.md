@@ -22,3 +22,23 @@
 - Organized crime: ransomware, phishing
 - Nation-state/APT: long-term persistence, stealthy exfiltration
 - Insiders: misuse of privileges, unauthorized access
+
+ Domain 2.2 – Common Threat Vectors
+
+### Definition
+A threat vector is the method or path attackers use to gain unauthorized access to a system, network, or data.
+
+### Common Threat Vectors
+- **Direct Access:** Physical entry, stolen devices, malicious USB
+- **Wireless:** Weak Wi-Fi encryption, rogue APs, evil twin attacks
+- **Email:** Phishing, spear phishing, malicious attachments/links
+- **Supply Chain:** Vendor compromise, malicious updates (e.g., SolarWinds)
+- **Social Media:** Fake accounts, malicious links, social engineering
+- **Removable Media:** USB drives, portable disks with malware
+- **Cloud:** Misconfigured services, compromised credentials, insecure APIs
+
+**SOC Relevance:**
+- Email vectors → phishing alerts in SIEM
+- Wireless vectors → IDS alerts for rogue APs
+- Supply chain → patch management + vendor monitoring
+- Cloud vectors → monitoring IAM logs and API calls
