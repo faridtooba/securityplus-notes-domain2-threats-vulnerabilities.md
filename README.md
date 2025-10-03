@@ -66,3 +66,26 @@ Phishing is a social engineering attack where attackers trick users into reveali
 - Analysts investigate phishing alerts in SIEM (blocked emails, DNS lookups to phishing domains)
 - Email gateways and DNS sinkholes are critical for detection
 - Incident response workflows often start with user-reported phishing
+
+- # Domain 2.2 – Impersonation
+
+### Definition
+Impersonation is a social engineering technique where an attacker pretends to be a trusted individual (employee, manager, vendor, or IT staff) to gain access or information.
+
+### Examples
+- **Business Email Compromise (BEC):** CEO/CFO impersonation to request wire transfers
+- **Help Desk Impersonation:** Fake IT staff requesting password resets
+- **Vendor Impersonation:** Fake invoices or bank account change requests
+- **Physical Impersonation:** Attacker posing as repair staff or delivery driver
+
+### Techniques
+- Authority exploitation (“I’m your manager, approve this now”)
+- Urgency (“This must be done immediately”)
+- Familiarity with internal terminology or names
+- Spoofed phone numbers or email domains
+
+**SOC Relevance:**
+- Analysts monitor for spoofed sender domains and abnormal financial transactions
+- BEC and impersonation often appear in phishing-related alerts
+- Quick escalation is critical since attackers often target executives and finance
+
