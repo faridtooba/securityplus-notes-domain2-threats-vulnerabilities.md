@@ -42,3 +42,27 @@ A threat vector is the method or path attackers use to gain unauthorized access 
 - Wireless vectors → IDS alerts for rogue APs
 - Supply chain → patch management + vendor monitoring
 - Cloud vectors → monitoring IAM logs and API calls
+
+# Domain 2.2 – Phishing
+
+### Definition
+Phishing is a social engineering attack where attackers trick users into revealing sensitive information or installing malware.
+
+### Types of Phishing
+- **Email Phishing:** Mass campaigns with malicious links or attachments
+- **Spear Phishing:** Targeted phishing aimed at specific individuals
+- **Whaling:** Spear phishing directed at executives (CEO/CFO)
+- **Vishing:** Voice phishing over phone calls
+- **Smishing:** SMS/text-based phishing
+- **Clone Phishing:** Copy of legitimate email with altered malicious links
+
+### Common Indicators
+- Suspicious or spoofed sender address
+- Urgent or fear-based language
+- Mismatched or hidden URLs
+- Unexpected attachments
+
+**SOC Relevance:**
+- Analysts investigate phishing alerts in SIEM (blocked emails, DNS lookups to phishing domains)
+- Email gateways and DNS sinkholes are critical for detection
+- Incident response workflows often start with user-reported phishing
