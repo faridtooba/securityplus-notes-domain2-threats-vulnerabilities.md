@@ -173,3 +173,28 @@ A malicious update is a legitimate software update modified or replaced to inclu
 - Verify update hashes and digital signatures.
 - Use threat intelligence to identify compromised vendor channels.
 - Correlate identical post-update anomalies across multiple endpoints.
+
+# Domain 2.3 – Operating System Vulnerabilities
+
+### Definition
+Operating system vulnerabilities are weaknesses in OS design, configuration, or code that attackers exploit for unauthorized access or privilege escalation.
+
+### Common Vulnerabilities
+- **Privilege Escalation:** Kernel or permission flaws
+- **Unpatched Systems:** Missing security updates (known CVEs)
+- **Default Credentials:** Factory passwords left unchanged
+- **Misconfigurations:** Open ports, weak file or share permissions
+- **DLL/Library Hijacking:** Malicious DLLs replacing legitimate ones
+- **Driver/Kernel Exploits:** Vulnerable device drivers
+- **Insecure Services:** Outdated or unencrypted protocols (Telnet, FTP)
+
+### Impacts
+- Privilege escalation
+- Malware persistence
+- Data theft or service disruption
+
+**SOC Relevance:**
+- Monitor EDR/SIEM for privilege-escalation or kernel-level alerts
+- Track patch compliance and vulnerability-scan reports
+- Detect configuration drift (new ports, disabled defenses)
+- Correlate anomalies to identify successful exploitation
