@@ -109,3 +109,20 @@ A watering hole attack compromises a website that a specific group of users visi
 - Endpoint security may detect drive-by downloads linked to watering holes
 - Threat intel feeds can identify known compromised sites
 - Correlation of multiple user infections from same domain is a key detection method
+
+# Domain 2.2 – Other Social Engineering Attacks
+
+### Techniques
+- **Pretexting:** Creating a fake scenario to gain trust (e.g., posing as HR or IT)
+- **Tailgating / Piggybacking:** Gaining physical access by following an authorized person
+- **Eliciting Information:** Extracting data through casual conversation
+- **Shoulder Surfing:** Observing sensitive info being entered
+- **Dumpster Diving:** Searching trash for confidential documents or devices
+- **Hoaxes:** Spreading false alerts or fake news to cause disruption or downloads
+- **Quid Pro Quo:** Offering benefits (tech help, gifts) for sensitive information
+
+**SOC Relevance:**
+- Badge access logs and cameras help detect tailgating
+- Fake alerts (hoaxes) often generate help-desk or SOC tickets
+- Analysts document and escalate social-engineering incidents
+- Supports user-awareness training and threat reporting processes
