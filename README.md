@@ -146,3 +146,30 @@ A race condition occurs when multiple processes or threads access a shared resou
 - Indicators include rapid file or registry changes from multiple processes.
 - EDR/SIEM alerts may show unexpected privilege escalation or modified binaries.
 - Analysts correlate timestamps to detect potential TOCTOU exploitation.
+
+# Domain 2.3 – Malicious Updates
+
+### Definition
+A malicious update is a legitimate software update modified or replaced to include malicious code. Attackers compromise vendor systems or distribution channels to spread the malware.
+
+### Process
+1. Compromise vendor build or update server.
+2. Inject malicious code into the update package.
+3. Distribute the “trusted” update to users.
+4. Victim installs update, executing malicious payload with elevated privileges.
+
+### Real-World Examples
+- SolarWinds Orion (2020)
+- CCleaner (2017)
+- NotPetya (2017)
+
+### Impacts
+- Remote code execution
+- Supply-chain compromise
+- Large-scale data breaches
+
+**SOC Relevance:**
+- Monitor EDR/SIEM for new processes, outbound traffic, or registry changes after updates.
+- Verify update hashes and digital signatures.
+- Use threat intelligence to identify compromised vendor channels.
+- Correlate identical post-update anomalies across multiple endpoints.
