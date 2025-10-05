@@ -198,3 +198,28 @@ Operating system vulnerabilities are weaknesses in OS design, configuration, or 
 - Track patch compliance and vulnerability-scan reports
 - Detect configuration drift (new ports, disabled defenses)
 - Correlate anomalies to identify successful exploitation
+
+# Domain 2.3 – Hardware Vulnerabilities
+
+### Definition
+Hardware vulnerabilities are weaknesses in the physical or firmware components of computing devices that attackers can exploit for unauthorized access, data theft, or persistence.
+
+### Common Types
+- **Firmware Vulnerabilities:** BIOS/UEFI tampering or outdated firmware
+- **CPU Side-Channel Attacks:** Spectre, Meltdown, Foreshadow
+- **Supply-Chain Tampering:** Compromised chips or firmware during manufacturing
+- **Peripheral/DMA Attacks:** Malicious USBs, PCIe/Thunderbolt access
+- **Hardware Backdoors:** Hidden maintenance/debug features
+- **Driver/Embedded Code Flaws:** Outdated or signed-but-vulnerable drivers
+
+### Impacts
+- Data exfiltration from protected memory
+- Persistent access beyond OS control
+- Privilege escalation via kernel or firmware flaws
+- Large-scale supply-chain compromise
+
+**SOC Relevance:**
+- Monitor firmware version changes and BIOS integrity checks
+- Watch for DMA, driver exploitation, or kernel-level privilege escalation
+- Ensure firmware and microcode patches are tracked and applied
+- Escalate cases of persistence surviving re-imaging (possible firmware rootkits)
