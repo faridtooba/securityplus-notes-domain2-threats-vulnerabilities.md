@@ -126,3 +126,23 @@ A watering hole attack compromises a website that a specific group of users visi
 - Fake alerts (hoaxes) often generate help-desk or SOC tickets
 - Analysts document and escalate social-engineering incidents
 - Supports user-awareness training and threat reporting processes
+
+# Domain 2.3 – Race Conditions
+
+### Definition
+A race condition occurs when multiple processes or threads access a shared resource simultaneously, and the program’s outcome depends on the timing of those events.
+
+### Example (TOCTOU)
+- A program checks if a file is safe.
+- Attacker replaces the file after the check but before the program uses it.
+- Result: attacker’s malicious file runs with elevated privileges.
+
+### Impacts
+- Privilege escalation
+- Data corruption or inconsistent state
+- Denial of Service (crash)
+
+**SOC Relevance:**
+- Indicators include rapid file or registry changes from multiple processes.
+- EDR/SIEM alerts may show unexpected privilege escalation or modified binaries.
+- Analysts correlate timestamps to detect potential TOCTOU exploitation.
