@@ -256,3 +256,38 @@ Virtualization vulnerabilities are weaknesses in hypervisors, VM images, contain
 - Use minimal, scanned VM/container images without secrets
 - Isolate management plane and use network segmentation/microsegmentation
 - Monitor management API logs and snapshot/image activity
+
+# Cloud-Specific Vulnerabilities (Security+ SY0-701 — 2.3)
+
+## Summary
+Cloud-specific vulnerabilities stem from shared infrastructure, misconfigurations, insecure APIs, and weak identity or access controls. Exploiting them can lead to data exposure, privilege escalation, or service compromise.
+
+## Common Vulnerabilities
+- Misconfigured storage (public S3/Blob buckets)
+- Insecure or unauthenticated APIs
+- Over-privileged IAM roles / shared credentials
+- Data isolation failures and weak encryption
+- Shadow IT cloud usage
+- Poor key management and unrotated credentials
+- Insecure third-party integrations
+- Disabled or incomplete audit logging
+
+## SOC Relevance
+- Detect abnormal API activity and IAM privilege changes.
+- Correlate cloud audit logs with network telemetry for data exfiltration detection.
+- Identify newly public resources or modified ACLs.
+- Monitor for API abuse and key misuse.
+
+## Defensive Lab Ideas
+- AWS S3 exposure and remediation demo.
+- API abuse simulation with SIEM correlation.
+- IAM key rotation detection.
+- Cloud logging verification (CloudTrail / Azure Activity Log).
+
+## Mitigations
+- Apply least privilege and MFA for IAM.
+- Enable and review audit logging.
+- Regularly scan cloud configs with CSPM tools.
+- Encrypt data in transit and at rest.
+- Rotate keys and disable unused credentials.
+- Monitor for public exposure and privilege escalation.
