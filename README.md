@@ -223,3 +223,36 @@ Hardware vulnerabilities are weaknesses in the physical or firmware components o
 - Watch for DMA, driver exploitation, or kernel-level privilege escalation
 - Ensure firmware and microcode patches are tracked and applied
 - Escalate cases of persistence surviving re-imaging (possible firmware rootkits)
+
+# Virtualization Vulnerabilities (Security+ SY0-701 — 2.3)
+
+## Summary
+Virtualization vulnerabilities are weaknesses in hypervisors, VM images, containers, or management planes that allow attackers to escape isolation, move laterally, or persist across VMs.
+
+## Common Issues
+- Hypervisor misconfiguration or unpatched hypervisor CVEs
+- VM escape vulnerabilities
+- Insecure VM images containing secrets or vulnerable packages
+- Excessive privileges for management/service accounts
+- Improper snapshot/image handling
+- Poor network segmentation in virtual networks
+- Insecure container images or orchestration configs
+
+## SOC Relevance / Detection
+- Alerts for mass VM creation or snapshot creation (CloudTrail/vSphere logs)
+- Unexpected east-west traffic between VMs
+- API/service account abuse for creating/modifying instances
+- Signs of persistence surviving re-imaging (possible firmware/hypervisor level)
+
+## Defensive Lab Ideas
+- Inventory and harden VM images and templates
+- Demonstrate secret proliferation from insecure images (lab-only)
+- Simulate lateral traffic and build SIEM rules to detect unexpected VM-to-VM flows
+- Sandbox cloud account: monitor API calls and detect privileged key abuse
+
+## Mitigations
+- Enforce RBAC, least privilege for management accounts
+- Patch hosts, hypervisors, and container runtimes
+- Use minimal, scanned VM/container images without secrets
+- Isolate management plane and use network segmentation/microsegmentation
+- Monitor management API logs and snapshot/image activity
