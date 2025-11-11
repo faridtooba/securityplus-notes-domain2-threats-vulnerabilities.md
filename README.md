@@ -327,3 +327,35 @@ Supply-chain vulnerabilities occur when attackers compromise third-party vendors
 - Limit vendor network access.
 - Perform vendor risk assessments.
 - Use continuous vulnerability scanning and CSPM tools.
+
+# Misconfiguration Vulnerabilities (Security+ SY0-701 — 2.3)
+
+## Summary
+Misconfiguration vulnerabilities occur when systems are improperly set up, leaving insecure defaults, open ports, or unnecessary privileges that attackers can exploit.
+
+## Common Examples
+- Default or weak credentials
+- Unrestricted file or bucket permissions
+- Open or unused network ports
+- Disabled logging or AV
+- Firewall rules open to all (0.0.0.0/0)
+- Outdated or default application settings
+
+## SOC Relevance
+- Detect configuration drift or open ports
+- Monitor for disabled security services
+- Identify new public cloud resources
+- Report misconfiguration findings from scans
+
+## Defensive Lab Ideas
+- Harden a local web server and rescan
+- Detect cloud misconfigurations (Prowler / ScoutSuite)
+- SIEM rule: alert on Defender disabled or ports added
+- Password audit for weak credentials
+
+## Mitigations
+- Enforce secure configuration baselines
+- Apply least privilege
+- Use IaC with validation
+- Remove unused services and ports
+- Enable logging and continuous scanning
