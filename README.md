@@ -291,3 +291,39 @@ Cloud-specific vulnerabilities stem from shared infrastructure, misconfiguration
 - Encrypt data in transit and at rest.
 - Rotate keys and disable unused credentials.
 - Monitor for public exposure and privilege escalation.
+
+# Supply Chain Vulnerabilities (Security+ SY0-701 — 2.3)
+
+### Summary
+Supply-chain vulnerabilities occur when attackers compromise third-party vendors, software updates, or hardware components to infiltrate downstream customers. They exploit trusted relationships to bypass direct defenses.
+
+### Examples
+- Trojanized software updates (SolarWinds)
+- Exploitable dependencies (Log4j)
+- Compromised open-source libraries
+- Tampered hardware or firmware
+- Unvetted third-party integrations
+- Compromised CI/CD pipelines
+
+### Impacts
+- Widespread compromise across customers
+- Data breaches and backdoor installation
+- Loss of vendor trust and operational downtime
+
+### SOC Relevance
+- Monitor vendor breach advisories and threat-intel feeds.
+- Correlate unusual network activity after updates.
+- Detect untrusted code-signing certificates.
+- Identify processes/services installed after vendor updates.
+
+### Defensive Lab Ideas
+- Verify file hashes and digital signatures of updates.
+- Run dependency vulnerability scans (npm audit / pip-audit).
+- Simulate IOC hunt for known supply-chain breaches.
+
+### Mitigations
+- Maintain a software bill of materials (SBOM).
+- Validate signatures/hashes of all software updates.
+- Limit vendor network access.
+- Perform vendor risk assessments.
+- Use continuous vulnerability scanning and CSPM tools.
