@@ -393,3 +393,34 @@ Mobile vulnerabilities involve weaknesses in device OS, apps, configurations, an
 - Block rooted/jailbroken devices.
 - Use VPN and HTTPS on public networks.
 - Provide user training on mobile phishing and QR code threats.
+
+# Zero-Day Vulnerabilities (Security+ SY0-701 — 2.3)
+
+## Summary
+A zero-day vulnerability is a previously unknown flaw with no available patch, often exploited before the vendor or defenders are aware. Detection relies on anomaly-based monitoring and threat intelligence rather than signatures.
+
+## Key Concepts
+- Zero-day vulnerability: unknown flaw not yet patched
+- Zero-day exploit: code exploiting that flaw
+- Zero-day attack: real-world use of such an exploit
+- N-day vulnerability: known, patch available, but still dangerous
+
+## SOC Relevance
+- Monitor behavioral anomalies and unusual outbound traffic
+- Use threat intel feeds to track emerging zero-days
+- Rapid patching once fixes are released
+- Hunt for post-compromise indicators (new processes, persistence)
+- Correlate logs from EDR, firewall, and threat feeds
+
+## Defensive Lab Ideas
+- Behavioral detection with EDR/SIEM for unexpected process activity
+- Feed-based alerting for new zero-days (CISA KEV, Exploit-DB)
+- Patch lifecycle documentation exercise for major vulnerabilities
+
+## Mitigations
+- Defense in depth and least privilege
+- Behavioral and heuristic EDR detection
+- Centralized threat intelligence integration
+- Frequent patching and secure baselines
+- Application whitelisting and segmentation
+- Incident response plan for rapid isolation
