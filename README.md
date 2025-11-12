@@ -359,3 +359,37 @@ Misconfiguration vulnerabilities occur when systems are improperly set up, leavi
 - Use IaC with validation
 - Remove unused services and ports
 - Enable logging and continuous scanning
+
+ Mobile Device Vulnerabilities (Security+ SY0-701 — 2.3)
+
+## Summary
+Mobile vulnerabilities involve weaknesses in device OS, apps, configurations, and networks that attackers exploit to steal data or gain unauthorized access.
+
+## Common Examples
+- Outdated OS or apps
+- Malicious or side-loaded applications
+- Jailbroken/rooted devices
+- Weak device configurations
+- Unsecured Wi-Fi or Bluetooth connections
+- Excessive app permissions / data leakage
+- MDM misconfigurations
+- Lost or stolen devices
+
+## SOC Relevance
+- Monitor MDM/EDR telemetry for rooted devices and outdated OS versions.
+- Correlate network logs for suspicious mobile IPs or Wi-Fi.
+- Respond to alerts of lost/stolen devices and enforce remote wipe.
+- Track mobile malware and phishing campaigns through threat intel.
+
+## Defensive Lab Ideas
+- Simulate MDM enrollment and policy violations.
+- Capture app permissions and network activity in a test lab.
+- Test Wi-Fi interception scenarios safely to demonstrate encryption needs.
+
+## Mitigations
+- Enforce MDM policies (PIN, encryption, remote-wipe).
+- Keep devices updated and patched.
+- Restrict app sources and permissions.
+- Block rooted/jailbroken devices.
+- Use VPN and HTTPS on public networks.
+- Provide user training on mobile phishing and QR code threats.
