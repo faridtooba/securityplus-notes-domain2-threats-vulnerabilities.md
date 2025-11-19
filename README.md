@@ -424,3 +424,38 @@ A zero-day vulnerability is a previously unknown flaw with no available patch, o
 - Frequent patching and secure baselines
 - Application whitelisting and segmentation
 - Incident response plan for rapid isolation
+
+# An Overview of Malware — Security+ SY0-701 (2.4)
+
+### Definition
+Malware is malicious software designed to damage systems, steal information, or provide unauthorized access.
+
+### Major Types
+- Virus – file infection and replication
+- Worm – self-spreading without user interaction
+- Trojan – appears legitimate but includes malicious code
+- Ransomware – encrypts data and demands payment
+- Spyware – monitors and steals information
+- Adware – unwanted advertising behavior
+- Rootkit – hides processes, files, and activity
+- Logic Bomb – delayed or triggered malicious action
+- Botnet Agent – enables remote C2 control
+
+### SOC Relevance
+- Analyze EDR/AV alerts, DNS logs, network traffic, and process anomalies
+- Extract IOCs (hashes, filenames, domains, C2 IPs)
+- Contain, eradicate, recover, and document incidents
+
+### Indicators of Malware
+- Unexpected processes or network connections
+- File encryption or mass renaming
+- Browser hijacking or unsolicited ads
+- Disabled security tools
+- Outbound traffic to suspicious domains
+
+### Mitigation
+- Behavioral EDR and AV tools
+- Email and web filtering
+- Network segmentation
+- Backups and ransomware readiness
+- Patching and hardening
