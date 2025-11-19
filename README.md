@@ -495,3 +495,36 @@ A worm is self-replicating malware that spreads automatically across networks us
 - Network segmentation
 - Backups and ransomware readiness
 - Patching and hardening
+
+# Spyware & Bloatware — Security+ SY0-701 (2.4)
+
+## Spyware
+Spyware is malicious software that secretly collects user information (keystrokes, passwords, screenshots, browser data) without permission.
+
+### Types
+- Keyloggers
+- Credential stealers
+- Screen capture spyware
+- Monitoring/stalkerware
+
+### SOC Relevance
+- Detect unknown processes or extensions
+- Identify abnormal outbound connections
+- Investigate credential-stealing behavior
+- Review EDR alerts for keylogging/screenshot activity
+
+## Bloatware
+Bloatware refers to pre-installed or unwanted software that slows devices, uses resources, or displays ads. Not always malicious, but it increases the attack surface.
+
+### SOC Relevance
+- Monitor CPU/memory usage spikes
+- Review user reports of slow devices
+- Flag adware-related activity
+- Recommend device hardening and removal
+
+## Mitigations
+- Use EDR and AV tools
+- Remove bloatware via standard images
+- Patch OS and apps
+- Limit admin rights
+- Monitor outbound network traffic
