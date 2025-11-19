@@ -453,6 +453,42 @@ Malware is malicious software designed to damage systems, steal information, or 
 - Disabled security tools
 - Outbound traffic to suspicious domains
 
+# Viruses and Worms — Security+ SY0-701 (2.4)
+
+## Viruses
+A virus is malware that attaches to a host file and requires user action to spread. It replicates by infecting files or applications.
+
+### Characteristics
+- Needs user interaction
+- Needs a host file/program
+- Spreads through attachments, downloads, USB devices
+- Often corrupts or modifies files
+
+## Worms
+A worm is self-replicating malware that spreads automatically across networks using vulnerabilities or weak credentials.
+
+### Characteristics
+- No user interaction required
+- Does not need a host file
+- Scans network and spreads on its own
+- Causes traffic spikes and rapid infection
+
+## Differences (Virus vs Worm)
+- Virus = manual spread, needs host  
+- Worm = automatic spread, network-based  
+
+## SOC Relevance
+- Detect file changes (virus)
+- Detect scanning and lateral movement (worm)
+- Identify patient zero and isolate quickly
+- Review AV/EDR detections and network logs
+
+## Mitigation
+- Patch systems and services (SMB/RDP vulnerabilities)
+- Use EDR and antivirus
+- Disable autorun and unnecessary services
+- Segment networks to limit worm spread
+- Educate users not to open suspicious attachments
 ### Mitigation
 - Behavioral EDR and AV tools
 - Email and web filtering
