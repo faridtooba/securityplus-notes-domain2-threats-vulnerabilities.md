@@ -528,3 +528,41 @@ Bloatware refers to pre-installed or unwanted software that slows devices, uses 
 - Patch OS and apps
 - Limit admin rights
 - Monitor outbound network traffic
+
+# Other Malware Types — Security+ SY0-701 (2.4)
+
+## Fileless Malware
+- Runs in memory using built-in tools (PowerShell, WMI).
+- Hard to detect because no file is written to disk.
+- SOC: monitor ScriptBlock logs, abnormal PowerShell usage, parent-child process chains.
+
+## Rootkits
+- Hide malware by modifying the OS or kernel.
+- Can hide processes, files, or registry keys.
+- SOC: look for hidden processes, mismatched system file hashes, disabled security controls.
+
+## Bootkits
+- Rootkits that infect the bootloader.
+- Load before the OS and gain full control early.
+- SOC: monitor bootloader integrity, secure boot logs.
+
+## Logic Bombs
+- Malicious code triggered by a date/event.
+- Often insider-planted.
+- SOC: watch for unusual scheduled tasks, timed anomalies.
+
+## Polymorphic Malware
+- Changes its code to evade detection.
+- Uses encryption or mutation engines.
+- SOC: rely on behavioral detection and EDR.
+
+## Armored Malware
+- Designed to prevent analysis (anti-debug, anti-VM).
+- SOC: use sandboxing and behavioral analysis.
+
+## Mitigations
+- EDR with memory scanning
+- Disable unused scripting engines
+- Patching and hardening
+- Application whitelisting
+- Strong monitoring and baselines
