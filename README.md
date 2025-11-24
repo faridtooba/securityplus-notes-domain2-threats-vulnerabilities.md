@@ -566,3 +566,36 @@ Bloatware refers to pre-installed or unwanted software that slows devices, uses 
 - Patching and hardening
 - Application whitelisting
 - Strong monitoring and baselines
+
+# Denial of Service (DoS / DDoS) — Security+ SY0-701 (2.4)
+
+## Definition
+A Denial of Service (DoS) attack attempts to make a system or service unavailable by overwhelming it with traffic or forcing it to crash.  
+A Distributed DoS (DDoS) attack uses many devices (often a botnet) to amplify the attack.
+
+## Types of DoS/DDoS
+- DoS (single source)
+- DDoS (botnets, massive traffic)
+- Application-level attacks (Slowloris, API floods)
+- Protocol attacks (SYN flood, UDP flood, Smurf)
+- Resource exhaustion (CPU, RAM, disk)
+
+## SOC Relevance
+- Detect traffic spikes and large numbers of requests
+- Watch for SYN flood patterns
+- Identify botnet traffic behavior
+- Use ISP or cloud DDoS protection
+- Check for intrusion attempts hidden behind the noise
+
+## Indicators
+- Slow or unreachable services
+- High CPU / network usage
+- Many requests from same IP or many IPs
+- Half-open TCP connections
+
+## Mitigations
+- Rate limiting and WAF
+- Firewall filtering and geo-blocking
+- Load balancing and autoscaling
+- DDoS scrubbing via cloud providers
+- System patching and hardening
