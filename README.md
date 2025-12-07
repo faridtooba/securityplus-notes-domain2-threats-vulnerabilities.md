@@ -627,3 +627,35 @@ DNS (Domain Name System) can be attacked to redirect traffic, steal data, hide C
 - Load balancing and autoscaling
 - DDoS scrubbing via cloud providers
 - System patching and hardening
+
+# Wireless Attacks — Security+ SY0-701 (2.4) — Professor Messer Summary
+
+## Rogue Access Point
+Unauthorized access point placed on the network; used for MITM and traffic interception.
+
+## Evil Twin
+Fake AP with identical SSID to trick users into connecting. Captures credentials and sessions.
+
+## Wireless Jamming
+Flooding radio frequencies to disrupt connectivity. Includes constant, intermittent, and reactive jamming.
+
+## Deauthentication Attacks
+Spoofed deauth frames disconnect clients to force reconnection. Used to capture WPA2 handshakes.
+
+## WPS Attacks
+WPS PIN is vulnerable to brute force → attacker gains Wi-Fi password. Should be disabled.
+
+## Bluetooth Attacks
+- **Bluejacking:** unsolicited messages.
+- **Bluesnarfing:** data theft.
+- **Bluebugging:** full device control.
+
+## RFID/NFC Attacks
+Cloning, replay attacks, relay attacks, unauthorized reading of badges or NFC payments.
+
+## SOC Relevance
+- Watch for rogue APs, evil twins, and unknown SSIDs.
+- Monitor for DHCP leases from unauthorized devices.
+- Detect repeated deauth events.
+- Investigate abnormal wireless connections or MAC addresses.
+- Ensure WPS is disabled and Wi-Fi uses WPA3.
