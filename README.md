@@ -593,6 +593,34 @@ A Distributed DoS (DDoS) attack uses many devices (often a botnet) to amplify th
 - Many requests from same IP or many IPs
 - Half-open TCP connections
 
+# DNS Attacks — Security+ SY0-701 (2.4)
+
+## Overview
+DNS (Domain Name System) can be attacked to redirect traffic, steal data, hide C2 channels, or perform DDoS attacks.
+
+## Common DNS Attacks
+- **DNS Poisoning / Cache Poisoning:** fake DNS records return malicious IPs.
+- **DNS Spoofing:** attacker impersonates DNS server.
+- **DNS Hijacking:** DNS settings changed on routers, devices, or domain accounts.
+- **DNS Tunneling:** attackers hide data/C2 traffic inside DNS queries.
+- **DNS Amplification:** uses open resolvers to amplify DDoS attacks.
+- **Typosquatting:** fake domain names look similar to real ones.
+
+## SOC Indicators
+- Long or random DNS queries (tunneling)
+- DNS answers from unexpected servers
+- Traffic spikes to/from DNS port 53
+- Many different DNS answers for same domain
+- Requests to suspicious or lookalike domains
+
+## Mitigation
+- DNSSEC
+- Block unauthorized DNS servers
+- Monitor DNS logs for anomalies
+- Response rate limiting
+- Secure DNS resolvers
+- Patch DNS infrastructure
+- Use MFA for domain registrar accounts
 ## Mitigations
 - Rate limiting and WAF
 - Firewall filtering and geo-blocking
