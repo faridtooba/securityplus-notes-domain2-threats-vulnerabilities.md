@@ -659,3 +659,32 @@ Cloning, replay attacks, relay attacks, unauthorized reading of badges or NFC pa
 - Detect repeated deauth events.
 - Investigate abnormal wireless connections or MAC addresses.
 - Ensure WPS is disabled and Wi-Fi uses WPA3.
+
+# On-Path Attacks — Security+ SY0-701 (2.4)
+
+## Overview
+On-Path (MITM) attacks occur when an attacker intercepts and possibly alters communication between two endpoints.
+
+## Types of On-Path Attacks
+- **MITM (Man-in-the-Middle):** attacker observes and modifies traffic.
+- **MITB (Man-in-the-Browser):** browser malware intercepts transactions.
+- **ARP Poisoning:** fake ARP replies redirect LAN traffic.
+- **Proxy Attacks:** malicious proxy captures HTTP/S traffic.
+- **SSL Stripping:** downgrade HTTPS → HTTP to steal credentials.
+- **Session Hijacking:** stealing session tokens to impersonate users.
+
+## SOC Indicators
+- Rapid ARP table changes
+- Certificate errors or HTTPS falling back to HTTP
+- Unknown proxy settings configured
+- Multiple IPs using the same session cookie
+- TLS handshake failures
+- Large outbound traffic to a suspicious proxy IP
+
+## Mitigation
+- HTTPS everywhere + HSTS
+- VPN for untrusted networks
+- Switch security: Dynamic ARP Inspection
+- 802.1X network authentication
+- MFA to reduce cookie/session impact
+- Monitor for rogue proxy and ARP behavior
