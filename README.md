@@ -714,3 +714,31 @@ A replay attack occurs when an attacker captures legitimate network traffic and 
 - Short session timeouts
 - Mutual authentication
 - Message authentication codes (MAC)
+
+# Malicious Code — Security+ SY0-701 (2.4)
+
+## Overview
+Malicious code refers to harmful software instructions, scripts, or embedded objects designed to damage systems, steal data, or bypass security. It includes macros, scripts, fileless malware, and hidden payloads.
+
+## Types of Malicious Code
+- **Macro Viruses:** malicious code inside Word/Excel documents.
+- **Scripting Attacks:** PowerShell, Python, Bash, VBScript running malicious commands.
+- **HTML/JavaScript Injection:** malicious web scripts for credential theft or hijacking.
+- **OLE Attacks:** embedded objects in documents containing harmful code.
+- **Fileless Malware:** runs in memory using built-in tools.
+- **Malicious Payloads:** code responsible for backdoors, data theft, ransomware, etc.
+
+## SOC Indicators
+- Office apps launching PowerShell
+- Suspicious or large scripts running in memory
+- New registry persistence entries
+- Abnormal outbound traffic
+- Embedded object warnings from Office logs
+
+## Mitigation
+- Disable macros by default
+- Use sandboxing for attachments
+- Patch browsers and Office apps
+- Memory-scanning EDR solutions
+- Disable PowerShell v2 and WMI abuse
+- Application whitelisting
