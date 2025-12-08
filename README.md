@@ -688,3 +688,29 @@ On-Path (MITM) attacks occur when an attacker intercepts and possibly alters com
 - 802.1X network authentication
 - MFA to reduce cookie/session impact
 - Monitor for rogue proxy and ARP behavior
+
+# Replay Attacks — Security+ SY0-701 (2.4)
+
+## Overview
+A replay attack occurs when an attacker captures legitimate network traffic and retransmits it later to trick a system into accepting the repeated request. The attacker does not alter the data; they simply resend it.
+
+## Common Scenarios
+- Authentication replay (stealing session IDs or cookies)
+- Network packet replay to repeat commands
+- Wireless replay attacks (WEP IV capture)
+- Financial API/transaction replay
+
+## SOC Indicators
+- Same session token reused from multiple IPs
+- Duplicate transactions or API requests
+- Multiple identical authentication attempts
+- Repeated identical packet signatures
+- Suspicious user activity without password entry
+
+## Mitigation
+- Encryption (TLS/HTTPS)
+- Timestamps on requests
+- Nonces (unique one-time values)
+- Short session timeouts
+- Mutual authentication
+- Message authentication codes (MAC)
