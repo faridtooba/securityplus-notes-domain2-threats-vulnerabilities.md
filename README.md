@@ -808,3 +808,35 @@ Cryptographic attacks attempt to break encryption, defeat authentication, or exp
 - TLS 1.3 and strong cipher suites
 - HSTS to prevent downgrade attacks
 - Monitor for brute force and password spraying
+
+# Password Attacks — Security+ SY0-701 (2.4)
+
+## Overview
+Password attacks attempt to guess, crack, or steal passwords through brute force methods, credential reuse, or social engineering.
+
+## Common Password Attacks
+- **Brute Force:** trying all combinations.
+- **Dictionary Attack:** using common passwords.
+- **Credential Stuffing:** trying leaked credentials from breaches.
+- **Password Spraying:** using one password across many accounts.
+- **Hybrid Attack:** dictionary + brute force.
+- **Rainbow Tables:** precomputed hash attacks.
+- **Mask Attack:** exploiting known password structure.
+- **Social Engineering:** tricking users to reveal passwords.
+
+## SOC Indicators
+- Multiple failed login attempts from same IP
+- Attempts across many user accounts (spraying)
+- Sudden login after many failures
+- High number of POST requests on login forms
+- Authentication from unusual locations
+- Login attempts at abnormal times
+
+## Mitigation
+- MFA everywhere
+- Password lockout policies
+- Strong password requirements
+- Rate limiting and CAPTCHA
+- WAF rules
+- Salting + hashing with bcrypt/PBKDF2/Argon2
+- Avoid password reuse and teach phishing awareness
