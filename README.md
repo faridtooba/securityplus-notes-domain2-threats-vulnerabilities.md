@@ -775,3 +775,36 @@ Application attacks target weaknesses in software, web apps, and APIs to steal d
 - SQL prepared statements
 - WAF and rate limiting
 - Patching and code reviews
+
+# Cryptographic Attacks — Security+ SY0-701 (2.4)
+
+## Overview
+Cryptographic attacks attempt to break encryption, defeat authentication, or exploit weaknesses in hashing and key management.
+
+## Types of Cryptographic Attacks
+- **Brute Force:** trying all combinations of keys or passwords.
+- **Dictionary Attack:** using lists of common passwords.
+- **Rainbow Table Attack:** using precomputed hash tables.
+- **Hybrid Attack:** combining dictionary + brute force.
+- **Birthday Attack:** exploiting hash collisions.
+- **Downgrade Attack:** forcing weaker encryption (e.g., older TLS).
+- **Replay Attack:** reusing captured encrypted data.
+- **Side-Channel Attack:** analyzing physical system behavior.
+- **Salt Attacks:** exploiting passwords hashed with no or weak salt.
+
+## SOC Indicators
+- Many login failures or authentication attempts
+- TLS version downgrade detection
+- Weak cipher suite usage
+- High CPU usage (hash cracking)
+- Hash collisions in logs
+- Certificate errors
+- Suspicious attempts to access encrypted data
+
+## Mitigation
+- Use long passwords + MFA
+- Rate limiting and lockout policies
+- Salted and strong hashing algorithms (bcrypt, PBKDF2)
+- TLS 1.3 and strong cipher suites
+- HSTS to prevent downgrade attacks
+- Monitor for brute force and password spraying
