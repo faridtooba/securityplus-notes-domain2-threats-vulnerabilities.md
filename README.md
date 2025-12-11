@@ -742,3 +742,36 @@ Malicious code refers to harmful software instructions, scripts, or embedded obj
 - Memory-scanning EDR solutions
 - Disable PowerShell v2 and WMI abuse
 - Application whitelisting
+
+# Application Attacks — Security+ SY0-701 (2.4)
+
+## Overview
+Application attacks target weaknesses in software, web apps, and APIs to steal data, bypass authentication, or execute code.
+
+## Common Application Attacks
+- **Credential Stuffing:** using stolen passwords from breaches.
+- **Brute Force:** trying many passwords until one works.
+- **Dictionary Attack:** using common wordlists.
+- **Rainbow Tables:** comparing stolen hashes with precomputed lists.
+- **SQL Injection:** injecting SQL commands to manipulate databases.
+- **Command Injection:** forcing OS command execution.
+- **XSS:** injecting malicious JavaScript.
+- **CSRF:** tricking browsers into performing unauthorized actions.
+- **API Attacks:** exploiting insecure, unauthenticated, or unrestricted APIs.
+- **Buffer Overflow:** manipulating memory to execute malicious code.
+
+## SOC Indicators
+- Many login failures or login attempts from same IP
+- SQL or application errors in logs
+- Suspicious characters in HTTP requests
+- Multiple sessions from same account
+- Abnormal API request patterns
+- Web server connecting to unknown IPs
+
+## Mitigation
+- MFA and strong authentication
+- Input validation and sanitation
+- Secure cookies and CSRF tokens
+- SQL prepared statements
+- WAF and rate limiting
+- Patching and code reviews
