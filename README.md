@@ -840,3 +840,34 @@ Password attacks attempt to guess, crack, or steal passwords through brute force
 - WAF rules
 - Salting + hashing with bcrypt/PBKDF2/Argon2
 - Avoid password reuse and teach phishing awareness
+
+# Indicators of Compromise (IoCs) — Security+ SY0-701 (2.4)
+
+## Overview
+Indicators of Compromise (IoCs) are observable artifacts or behaviors that suggest a system or network may have been compromised.
+
+## Types of IoCs
+- **Network-based:** malicious IPs, domains, DNS anomalies
+- **Host-based:** suspicious processes, registry changes, services
+- **File-based:** malware hashes, unknown executables
+- **Email-based:** phishing links, malicious attachments
+- **Behavior-based:** unusual login patterns, lateral movement
+
+## SOC Usage
+- Extract IoCs from alerts or threat intelligence
+- Search for IoCs across SIEM and EDR
+- Correlate multiple indicators to confirm incidents
+- Use IoCs to contain and remediate threats
+
+## Examples
+- Malware C2 communication → suspicious IP/domain
+- Phishing email → malicious URL and sender
+- Ransomware → file extensions and encryption process
+
+## Response Actions
+- Block IPs/domains
+- Quarantine hosts
+- Disable accounts
+- Reset credentials
+- Patch affected systems
+- Update detection rules
