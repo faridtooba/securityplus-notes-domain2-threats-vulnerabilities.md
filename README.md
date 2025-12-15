@@ -871,3 +871,39 @@ Indicators of Compromise (IoCs) are observable artifacts or behaviors that sugge
 - Reset credentials
 - Patch affected systems
 - Update detection rules
+
+# Segmentation and Access Control — Security+ SY0-701 (2.5)
+
+## Overview
+Segmentation divides networks into isolated zones to limit attack spread. Access control enforces who can access resources and under what conditions.
+
+## Segmentation Types
+- **Physical Segmentation:** separate hardware and networks.
+- **Logical Segmentation:** VLANs, subnets, firewall rules.
+- **Microsegmentation:** fine-grained, workload-level isolation.
+
+## Access Control Models
+- **MAC (Mandatory):** strict, centrally enforced.
+- **DAC (Discretionary):** owner-controlled access.
+- **RBAC (Role-Based):** permissions based on job roles.
+- **ABAC (Attribute-Based):** permissions based on attributes (device, time, location).
+
+## SOC Relevance
+- Prevents lateral movement
+- Reduces breach impact
+- Improves attack detection
+- Reveals misconfigurations and role abuse
+
+## SOC Indicators
+- Unauthorized access attempts
+- Workstations accessing restricted servers
+- Guest networks reaching internal systems
+- Excessive east-west traffic
+- Repeated access denied events
+
+## Best Practices
+- Enforce least privilege
+- Use RBAC and ABAC where appropriate
+- Apply firewall rules between segments
+- Monitor and log all access events
+- Review permissions regularly
